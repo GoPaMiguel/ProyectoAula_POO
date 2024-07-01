@@ -46,6 +46,15 @@ public class PremioDTO {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("PremioDTO{");
+        sb.append("idPremio=").append(idPremio);
+        sb.append(", puntos=").append(puntos);
+        sb.append(", nombre=").append(nombre);
+        sb.append('}');
+        return sb.toString();
+    }        
 }

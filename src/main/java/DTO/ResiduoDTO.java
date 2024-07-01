@@ -8,8 +8,7 @@ public class ResiduoDTO {
 
     public ResiduoDTO() {
     }
-    
-    
+
     public ResiduoDTO(int idResiduo, int puntos, String tipo) {
         this.idResiduo = idResiduo;
         this.puntos = puntos;
@@ -43,5 +42,16 @@ public class ResiduoDTO {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("ResiduoDTO{");
+        sb.append("idResiduo=").append(idResiduo);
+        sb.append(", puntos=").append(puntos);
+        sb.append(", tipo=").append(tipo);
+        sb.append('}');
+        return sb.toString();
     }
 }

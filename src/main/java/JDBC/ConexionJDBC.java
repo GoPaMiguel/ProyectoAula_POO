@@ -23,10 +23,6 @@ public class ConexionJDBC {
         return bds;
     }
 
-    public static void main(String[] args) throws SQLException {
-        ConexionJDBC.conectar();
-    }
-
     public static Connection conectar() throws SQLException {
         return getDataSource().getConnection();
     }

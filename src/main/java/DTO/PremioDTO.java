@@ -1,25 +1,25 @@
 package DTO;
 
-public class PremiosDTO {
+public class PremioDTO {
     private int idPremio;
     private int puntos;
     private String nombre;
 
-    public PremiosDTO() {
+    public PremioDTO() {
     }
 
-    public PremiosDTO(int idPremio, int puntos, String nombre) {
+    public PremioDTO(int idPremio, int puntos, String nombre) {
         this.idPremio = idPremio;
         this.puntos = puntos;
         this.nombre = nombre;
     }
 
-    public PremiosDTO(int puntos, String nombre) {
+    public PremioDTO(int puntos, String nombre) {
         this.puntos = puntos;
         this.nombre = nombre;
     }
 
-    public PremiosDTO(int idPremio) {
+    public PremioDTO(int idPremio) {
         this.idPremio = idPremio;
     }
 

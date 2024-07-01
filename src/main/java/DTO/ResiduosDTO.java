@@ -2,12 +2,21 @@ package DTO;
 
 public class ResiduosDTO {
 
-    private int  idResiduo;
+    private int idResiduo;
     private int puntos;
     private String tipo;
 
+    public ResiduosDTO() {
+    }
+    
+    
     public ResiduosDTO(int idResiduo, int puntos, String tipo) {
         this.idResiduo = idResiduo;
+        this.puntos = puntos;
+        this.tipo = tipo;
+    }
+
+    public ResiduosDTO(int puntos, String tipo) {
         this.puntos = puntos;
         this.tipo = tipo;
     }

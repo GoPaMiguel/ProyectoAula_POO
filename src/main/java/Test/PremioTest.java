@@ -8,7 +8,7 @@ import java.sql.*;
 import java.util.List;
 
 public class PremioTest {
-    
+
     public static void main(String[] args) throws SQLException {
 
         //Creando Objetos
@@ -20,7 +20,7 @@ public class PremioTest {
         //instancia a las clases
         Connection cx = null;
         List<PremioDTO> premios = null;
-        
+
         try {
             cx = ConexionJDBC.conectar();
             PremioDao premioDao = new PremioDaoJDBC(cx);
@@ -31,16 +31,16 @@ public class PremioTest {
             //Metodos DAO
             //premioDao.insertar(premioNuevo);
             //premioDao.actualizar(premioAC);
-            premioDao.eliminar(premioElinado);
+            //premioDao.eliminar(premioElinado);
             premios = premioDao.listar();
             
             System.out.println("premios = " + premios.toString());
             cx.setAutoCommit(true);
-            
+
         } catch (SQLException ex) {
             System.out.println("Error: " + ex.toString());
             cx.rollback();
         }
-        
+
     }
 }

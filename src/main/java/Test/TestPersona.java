@@ -3,7 +3,7 @@ package Test;
 import DAO.PersonaDao;
 import DTO.PersonaDTO;
 import JDBC.ConexionJDBC;
-import JDBC.PersonaDaoJDBC;
+import DAOJDBC.PersonaDaoJDBC;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
@@ -12,7 +12,7 @@ public class TestPersona {
 
     public static void main(String[] args) {
 
-        //Instanciando clases
+        //Creando objetos
         PersonaDTO persona = new PersonaDTO("PruebaValueDefault", "NNA4", "1212", "Ing");
         PersonaDTO personaModificada = new PersonaDTO(2);
         PersonaDTO personaEliminada = new PersonaDTO(3);

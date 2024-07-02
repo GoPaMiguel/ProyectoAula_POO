@@ -8,9 +8,9 @@ public interface PremioDao {
 
     public List<PremioDTO> listar();
 
-    public void insertar(PersonaDao personaDao) throws SQLException;
+    public void insertar(PremioDTO premioDTO) throws SQLException;
 
-    public void actualizar(PersonaDao personaDao) throws SQLException;
+    public void actualizar(PremioDTO premioDTO) throws SQLException;
 
-    public void eliminar(PersonaDao personaDao) throws SQLException;
+    public void eliminar(PremioDTO premioDTO) throws SQLException;
 }

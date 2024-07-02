@@ -1,6 +1,8 @@
-package JDBC;
+package DAOJDBC;
 
 import DTO.PersonaDTO;
+import JDBC.ConexionJDBC;
+import JDBC.ConexionJDBC;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +13,7 @@ public class PersonaDaoJDBC implements DAO.PersonaDao {
     private static final String SQL_LIST = "SELECT * FROM personas;";
     private static final String SQL_INSERT = "INSERT INTO personas (cedula, nombre, apellido, carrera, puntos) VALUES (?,?,?,?,?);";
     private static final String SQL_UPDATE = "UPDATE personas SET nombre=?, apellido=?, carrera=?, puntos=? WHERE idPersona=?;";
-    private static final String SQL_DELATE = "DELETE FROM personas WHERE idpersona=? ";
+    private static final String SQL_DELETE = "DELETE FROM personas WHERE idpersona=? ";
 
     public PersonaDaoJDBC() {
     }
@@ -112,7 +114,7 @@ public class PersonaDaoJDBC implements DAO.PersonaDao {
 
         try {
             cx = conexionTransaccional != null ? conexionTransaccional : ConexionJDBC.conectar();
-            stmt = cx.prepareCall(SQL_DELATE);
+            stmt = cx.prepareCall(SQL_DELETE);
             stmt.setInt(1, personaDTO.getIdPersona());
             stmt.executeUpdate();
         } finally {
